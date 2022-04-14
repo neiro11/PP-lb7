@@ -73,7 +73,7 @@ async function EditCar(carId, carName, carModel, carCount) {
         document.querySelector("tr[data-rowid='" + car.id + "']").replaceWith(row(car));
     }
 }
-// Удаление песни
+// Удаление машинки
 async function DeleteCar(id) {
     const response = await fetch("/api/cars/" + id, {
         method: "DELETE",
@@ -140,6 +140,7 @@ function InitialFunction() {
     // сброс значений формы
     document.getElementById("reset").click(function (e) {
         e.preventDefault();
+        alert('hi');
         reset();
     })
     // отправка формы
